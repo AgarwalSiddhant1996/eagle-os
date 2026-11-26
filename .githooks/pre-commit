@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+node scripts/sanitize.mjs --release
+npm test

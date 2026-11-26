@@ -1,0 +1,19 @@
+name: Verify
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - run: node scripts/package-extension.mjs --check
+      - run: node scripts/sanitize.mjs --history
+      - name: Require independent release clearance
+        run: echo "Baseline checks do not certify publication. Release checks require the external private rule pack and explicit approval."

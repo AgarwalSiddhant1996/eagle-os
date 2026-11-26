@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Eagle OS</title><link rel="stylesheet" href="./style.css"><script type="module" src="./app.mjs"></script></head>
+<!-- THESIS: A calm everyday PM operating review point with clear surface hierarchy, work owners and reviewable choices.
+OWN-WORLD: Grounded neutral light and deep slate dark canvas, elevated bordered cards, system-sans type and restrained blue actions.
+STORY: Connect tools in calm plain English, prepare source-backed options, and review decisions without tab sprawl.
+FIRST VIEWPORT: A 52px segmented navigation bar, hero briefing card, and a structured 2-column Today workspace.
+FORM: Familiar operating dashboard with crisp card elevation, neutral fixtures and local-first state. -->
+<body>
+<a href="#content" class="skip">Skip to workspace</a>
+<header class="app-bar"><a class="brand" href="#" aria-label="Eagle OS home">Eagle OS</a>
+<nav id="tabs" aria-label="Workspace" hidden><button data-view="today">Today</button><button data-view="work">Work</button><button data-view="improvements">Improvements</button></nav>
+<div class="bar-actions"><span id="freshness" role="status">Not checked yet</span><label class="theme-label"><select id="theme" aria-label="Theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+<button id="refresh" type="button" class="secondary pill-btn">Refresh</button><button id="preferences" type="button" class="secondary pill-btn">Settings</button></div></header>
+<span id="workspace-title" hidden>Your workspace</span>
+<div class="error-wrap"><p id="error" role="alert" tabindex="-1" hidden></p><button id="report-error" type="button" class="text-button" hidden>Report this issue</button></div>
+<main id="content" tabindex="-1"><p class="loading-state">Opening your workspace...</p></main>
+<footer>Local-first PM workspace. Nothing is sent externally without your approval.</footer>
+</body></html>

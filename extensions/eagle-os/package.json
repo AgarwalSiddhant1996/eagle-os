@@ -1,0 +1,16 @@
+{
+  "name": "eagle-os",
+  "version": "0.7.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "A purpose-first work, evidence and decision workspace.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/cli.mjs serve",
+    "test": "node --test",
+    "check": "node scripts/sanitize.mjs",
+    "verify": "npm test && npm run check",
+    "package:extension": "node scripts/package-extension.mjs"
+  }
+}

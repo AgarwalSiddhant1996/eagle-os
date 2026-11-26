@@ -1,0 +1,17 @@
+node_modules/
+coverage/
+.test-output/
+*.pending
+*.log
+.env
+.env.*
+!.env.example
+data/
+profiles/
+artifacts/
+*.zip
+*.png
+!docs/assets/*.png
+*.jpg
+*.pdf
+private-rules*
